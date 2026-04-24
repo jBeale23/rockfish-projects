@@ -1,0 +1,9 @@
+prefix: /home/jbeale3/apbsenv
+channels:
+  - conda-forge
+dependencies:
+  - python==3.12
+  - biopython
+  - pip
+  - pip:
+    - pdb2pqr
