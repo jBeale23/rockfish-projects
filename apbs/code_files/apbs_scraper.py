@@ -21,8 +21,9 @@ def pull_apbs_data(apbs_output: Path, output_file: Path | None, protein_name: st
             for line in infile
         ]
         matches = [scientific_to_decimal(match) for match in matches if match is not None]
-        if len(matches) > 2:  # noqa: PLR2004 This comparison is against the known correct number of outputs for this particular calculation
-            warn(f"WARNING: Input file {apbs_output} contains more than two energies.", UserWarning, stacklevel=2)
+        if len(matches) != 2:  # noqa: PLR2004 This comparison is against the known correct number of outputs for this particular calculation
+            msg = f"FATAL: Input file {apbs_output} does not contain two energies."
+            raise RuntimeError(msg)
         outfile.write(f"{protein_name}\t{'\t'.join(matches)}\n")
 
 
