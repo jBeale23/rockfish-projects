@@ -23,7 +23,7 @@ OUTPUT_DIR="${WK_DIR}/fragpipe_outputs"
 function err_log() {
 	status="${?}"
 	printf "[%(%Y-%m-%d %H:%M:%S)T]: %s failed at %s with exit code %s\n" -1 "${BASH_COMMAND}" "${LINENO}" "${status}" >&2
-	exit "${status}"
+	exit
 }
 trap 'err_log' ERR
 
