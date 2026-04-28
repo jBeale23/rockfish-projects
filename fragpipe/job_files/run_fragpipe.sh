@@ -25,7 +25,7 @@ function err_log() {
 	printf "[%(%Y-%m-%d %H:%M:%S)T]: %s failed at %s with exit code %s\n" -1 "${BASH_COMMAND}" "${LINENO}" "${status}" >&2
 	exit "${status}"
 }
-trap err_log ERR
+trap 'err_log' ERR
 
 cd "${WK_DIR}" || exit 1
 [[ ! -e "${OUTPUT_DIR}" ]] && mkdir -p "${OUTPUT_DIR}"
