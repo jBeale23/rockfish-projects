@@ -13,7 +13,7 @@
 #SBATCH --mail-type=END,FAIL,INVALID_DEPEND,TIME_LIMIT
 
 WK_DIR="$HOME/scr4_sfried3/apbs_calcs"
-PROJECT_DIR="$HOME/git/apbs"
+PROJECT_DIR="$HOME/repositories/rockfish-projects/apbs"
 CODE_DIR="$PROJECT_DIR/code_files"
 ENV_DIR="$PROJECT_DIR/env_files"
 INPUT_FILE="$WK_DIR/incomplete_structures.txt"
