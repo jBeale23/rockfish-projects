@@ -1,7 +1,7 @@
 #!/bin/bash -ue
 #SBATCH --job-name="apbs"
 #SBATCH --partition=shared
-#SBATCH --time=00-00:10:00
+#SBATCH --time=00-00:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --account=sfried3
